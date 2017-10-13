@@ -5,17 +5,35 @@
     android:orientation="vertical"
     tools:context="com.jhonlopera.laboratorioxfragments.OperacionFragment">
 
+
+
+
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"></LinearLayout>
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="400px"
+            android:layout_height="400px"
+            android:textSize="30sp"
+            android:id="@+id/img"/>
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hola"/>
+            android:text="Hola"
+            android:textSize="30sp"
+            android:id="@+id/tvf"/>
 
     </LinearLayout>
 
@@ -23,7 +41,21 @@
         android:id="@+id/bcalcular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calcular" />
+        android:text="ir a otro fragment" />
+    <Button
+        android:id="@+id/bcalcular2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre" />
+    <Button
+        android:id="@+id/bcalcular3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Correo" />
+</LinearLayout>
+
+
+
 
 
 </FrameLayout>

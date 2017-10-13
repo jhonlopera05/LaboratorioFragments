@@ -25,9 +25,18 @@ public class MainActivity extends AppCompatActivity implements opintercafe {
 
         fm =getSupportFragmentManager();
         ft=fm.beginTransaction();
-
         OperacionFragment fragment =new OperacionFragment();
-        ft.add(R.id.frame,fragment).commit();
+
+        String nombre="asfasfa";
+        Bundle args = new Bundle();
+        args.putString("nombre",nombre);
+        args.putString("correo","jhon@prueba");
+        fragment.setArguments(args);
+        ft.replace(R.id.frame,fragment).commit();
+        ft.addToBackStack("nombre");
+        ft.addToBackStack("correo");
+
+        
 
     }
 
@@ -65,6 +74,15 @@ public class MainActivity extends AppCompatActivity implements opintercafe {
     public void openOperationFragmet() {
         ft=fm.beginTransaction();
         OperacionFragment fragment =new OperacionFragment();
+
+        Bundle args = new Bundle();
+        args.putString("nombre","jhon lopera");
+        args.putString("correo","jhon@prueba");
+        fragment.setArguments(args);
         ft.replace(R.id.frame,fragment).commit();
+        ft.addToBackStack("nombre");
+        ft.addToBackStack("correo");
+
+
     }
 }

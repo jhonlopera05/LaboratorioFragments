@@ -3,12 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.jhonlopera.laboratorioxfragments.DataFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="otro fragment"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="volver"
         android:id="@+id/bcalcular2" />
+
+</LinearLayout>
+
+
 
 </FrameLayout>

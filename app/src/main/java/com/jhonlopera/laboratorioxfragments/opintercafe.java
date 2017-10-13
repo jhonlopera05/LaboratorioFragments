@@ -5,6 +5,7 @@ package com.jhonlopera.laboratorioxfragments;
  */
 
 public interface opintercafe {
+
     void openDatafragment();
     void openOperationFragmet();
 

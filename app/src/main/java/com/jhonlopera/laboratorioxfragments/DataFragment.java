@@ -4,19 +4,20 @@ import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
-
+import android.widget.TextView;
 
 
 public class DataFragment extends Fragment implements View.OnClickListener {
 
     opintercafe Opinterface;
     Button bcalcular;
+    TextView t;
 
 
     public DataFragment() {
@@ -34,6 +35,14 @@ public class DataFragment extends Fragment implements View.OnClickListener {
         bcalcular.setOnClickListener(this);
         return view;
     }
+
+    @Override
+    public void onActivityCreated( Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        t=(TextView) getActivity().findViewById(R.id.tvf);
+    }
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -45,5 +54,9 @@ public class DataFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Opinterface.openOperationFragmet();
+    }
+
+    public void cambiar(String s){
+        t.setText(s);
     }
 }
